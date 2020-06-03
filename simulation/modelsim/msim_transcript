@@ -1,0 +1,494 @@
+# Reading C:/altera/91/modelsim_ase/tcl/vsim/pref.tcl 
+# do Telemetry_link_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\91\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\91\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/My_Projects/Telemetry/phase_acc.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity phase_acc
+# -- Compiling architecture a of phase_acc
+# vcom -93 -work work {C:/My_Projects/Telemetry/pipo_nbit.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity pipo_nbit
+# -- Compiling architecture b of pipo_nbit
+# vcom -93 -work work {C:/My_Projects/Telemetry/adder_nbit.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity adder_nbit
+# -- Compiling architecture arc_add of adder_nbit
+# vcom -93 -work work {C:/My_Projects/Telemetry/lut_cos.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity lut_cos
+# -- Compiling architecture arc_lut of lut_cos
+# vcom -93 -work work {C:/My_Projects/Telemetry/rx_clock_unit.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity rx_clock_unit
+# -- Compiling architecture behav of rx_clock_unit
+# vcom -93 -work work {C:/My_Projects/Telemetry/bfsk_demod.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity bfsk_demod
+# -- Compiling architecture arc_bfsk of bfsk_demod
+# vcom -93 -work work {C:/My_Projects/Telemetry/rx_carrier_gen.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity rx_carrier_gen
+# -- Compiling architecture behave of rx_carrier_gen
+# vcom -93 -work work {C:/My_Projects/Telemetry/multiply.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity multiply
+# -- Compiling architecture behavioral of multiply
+# vcom -93 -work work {C:/My_Projects/Telemetry/accumulate.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity accumulate
+# -- Compiling architecture arc_acccum of accumulate
+# vcom -93 -work work {C:/My_Projects/Telemetry/decision_dev.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity decision_dev
+# -- Compiling architecture arc_decision of decision_dev
+# vcom -93 -work work {C:/My_Projects/Telemetry/manchester_decoder.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity manchester_decoder
+# -- Compiling architecture behave of manchester_decoder
+# vcom -93 -work work {C:/My_Projects/Telemetry/telemetry_tx.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity telemetry_tx
+# -- Compiling architecture arc_tx of telemetry_tx
+# vcom -93 -work work {C:/My_Projects/Telemetry/telemetry_rx.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity telemetry_rx
+# -- Compiling architecture arc_telemetry_rx of telemetry_rx
+# vcom -93 -work work {C:/My_Projects/Telemetry/Telemetry_link.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity telemetry_link
+# -- Compiling architecture behavioral of telemetry_link
+# vcom -93 -work work {C:/My_Projects/Telemetry/clock_unit.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity clock_unit
+# -- Compiling architecture a of clock_unit
+# vcom -93 -work work {C:/My_Projects/Telemetry/t_ff.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity t_ff
+# -- Compiling architecture b of t_ff
+# vcom -93 -work work {C:/My_Projects/Telemetry/manchester_encoder.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity manchester_encoder
+# -- Compiling architecture b of manchester_encoder
+# vcom -93 -work work {C:/My_Projects/Telemetry/bfsk_mod_ctrl.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity bfsk_mod_ctrl
+# -- Compiling architecture a of bfsk_mod_ctrl
+# 
+# vcom -93 -work work {C:/My_Projects/Telemetry/simulation/modelsim/telemetry_link.vht}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity telemetry_link_vhd_tst
+# -- Compiling architecture telemetry_link_arch of telemetry_link_vhd_tst
+# ** Warning: [4] C:/My_Projects/Telemetry/simulation/modelsim/telemetry_link.vht(84): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L cycloneii -L rtl_work -L work -voptargs="+acc" tb_telementry_link
+# vsim -L altera -L lpm -L sgate -L altera_mf -L cycloneii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps tb_telementry_link 
+# ** Error: (vsim-3170) Could not find 'C:\My_Projects\Telemetry\simulation\modelsim\rtl_work.tb_telementry_link'.
+# Error loading design
+# Error: Error loading design 
+#        Pausing macro execution 
+# MACRO ./Telemetry_link_run_msim_rtl_vhdl.do PAUSED at line 29
+vcom -93 -work work -O0 C:/My_Projects/Telemetry/accumulate.vhd
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity accumulate
+# -- Compiling architecture arc_acccum of accumulate
+vcom -93 -work work -O0 C:/My_Projects/Telemetry/adder_nbit.vhd
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity adder_nbit
+# -- Compiling architecture arc_add of adder_nbit
+vcom -93 -work work -O0 C:/My_Projects/Telemetry/bfsk_demod.vhd
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity bfsk_demod
+# -- Compiling architecture arc_bfsk of bfsk_demod
+vcom -93 -work work -O0 C:/My_Projects/Telemetry/bfsk_mod_ctrl.vhd
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity bfsk_mod_ctrl
+# -- Compiling architecture a of bfsk_mod_ctrl
+vcom -93 -work work -O0 C:/My_Projects/Telemetry/clock_unit.vhd
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity clock_unit
+# -- Compiling architecture a of clock_unit
+vcom -93 -work work -O0 C:/My_Projects/Telemetry/decision_dev.vhd
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity decision_dev
+# -- Compiling architecture arc_decision of decision_dev
+vcom -93 -work work -O0 C:/My_Projects/Telemetry/lut_cos.vhd
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity lut_cos
+# -- Compiling architecture arc_lut of lut_cos
+vcom -93 -work work -O0 C:/My_Projects/Telemetry/manchester_decoder.vhd
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity manchester_decoder
+# -- Compiling architecture behave of manchester_decoder
+vcom -93 -work work -O0 C:/My_Projects/Telemetry/manchester_encoder.vhd
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity manchester_encoder
+# -- Compiling architecture b of manchester_encoder
+vcom -93 -work work -O0 C:/My_Projects/Telemetry/multiply.vhd
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity multiply
+# -- Compiling architecture behavioral of multiply
+vcom -93 -work work -O0 C:/My_Projects/Telemetry/phase_acc.vhd
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity phase_acc
+# -- Compiling architecture a of phase_acc
+vcom -93 -work work -O0 C:/My_Projects/Telemetry/pipo_nbit.vhd
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity pipo_nbit
+# -- Compiling architecture b of pipo_nbit
+vcom -93 -work work -O0 C:/My_Projects/Telemetry/rx_carrier_gen.vhd
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity rx_carrier_gen
+# -- Compiling architecture behave of rx_carrier_gen
+vcom -93 -work work -O0 C:/My_Projects/Telemetry/rx_clock_unit.vhd
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity rx_clock_unit
+# -- Compiling architecture behav of rx_clock_unit
+vcom -93 -work work -O0 C:/My_Projects/Telemetry/T_ff.vhd
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity t_ff
+# -- Compiling architecture b of t_ff
+vcom -93 -work work -O0 C:/My_Projects/Telemetry/Telemetry_link.vhd
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity telemetry_link
+# -- Compiling architecture behavioral of telemetry_link
+vcom -93 -work work -O0 C:/My_Projects/Telemetry/simulation/modelsim/telemetry_link.vht
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity telemetry_link_vhd_tst
+# -- Compiling architecture telemetry_link_arch of telemetry_link_vhd_tst
+# ** Warning: [4] C:/My_Projects/Telemetry/simulation/modelsim/telemetry_link.vht(84): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+vcom -93 -work work -O0 C:/My_Projects/Telemetry/telemetry_rx.vhd
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity telemetry_rx
+# -- Compiling architecture arc_telemetry_rx of telemetry_rx
+vcom -93 -work work -O0 C:/My_Projects/Telemetry/telemetry_tx.vhd
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity telemetry_tx
+# -- Compiling architecture arc_tx of telemetry_tx
+vsim -L altera -L lpm -L sgate -L altera_mf -L cycloneii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps work.telemetry_link_vhd_tst
+# vsim -L altera -L lpm -L sgate -L altera_mf -L cycloneii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps work.telemetry_link_vhd_tst 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.numeric_std(body)
+# Loading work.telemetry_link_vhd_tst(telemetry_link_arch)
+# Loading work.telemetry_link(behavioral)
+# Loading work.telemetry_tx(arc_tx)
+# Loading work.clock_unit(a)
+# Loading work.t_ff(b)
+# Loading work.manchester_encoder(b)
+# Loading work.bfsk_mod_ctrl(a)
+# Loading work.phase_acc(a)
+# Loading work.pipo_nbit(b)
+# Loading work.adder_nbit(arc_add)
+# Loading work.lut_cos(arc_lut)
+# Loading work.telemetry_rx(arc_telemetry_rx)
+# Loading work.rx_clock_unit(behav)
+# Loading work.bfsk_demod(arc_bfsk)
+# Loading work.rx_carrier_gen(behave)
+# Loading work.multiply(behavioral)
+# Loading work.accumulate(arc_acccum)
+# Loading work.decision_dev(arc_decision)
+# Loading work.manchester_decoder(behave)
+# WARNING: No extended dataflow License exists
+add wave \
+{sim:/telemetry_link_vhd_tst/din } 
+add wave \
+{sim:/telemetry_link_vhd_tst/data_out } 
+add wave \
+{sim:/telemetry_link_vhd_tst/recieved_bfsk_signal } 
+add wave \
+{sim:/telemetry_link_vhd_tst/reset } 
+add wave \
+{sim:/telemetry_link_vhd_tst/transmitter_out } 
+add wave \
+{sim:/telemetry_link_vhd_tst/master_clk } 
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/mul1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/mul1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/mul0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/mul0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 3  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/mul1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 3  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/mul0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 30 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 30 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 70 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 70 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 90 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 90 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 110 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 110 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 130 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 130 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 150 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 150 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 170 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 170 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 190 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 190 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 210 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 210 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 230 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 230 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 250 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 250 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 270 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 270 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 290 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 290 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 310 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 310 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 330 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 330 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 350 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 350 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 370 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 370 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 390 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 390 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 410 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 410 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 430 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 430 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 450 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 450 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 470 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 470 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 490 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 490 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 510 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 510 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 530 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 530 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 550 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 550 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 570 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 570 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 590 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 590 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 610 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 610 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 630 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 630 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 650 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 650 ns  Iteration: 2  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod/acc1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 650 ns  Iteration: 5  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 650 ns  Iteration: 5  Instance: /telemetry_link_vhd_tst/i1/tele_rx/rx_demod
+# Updating msgviewer database...
+run
+# Updating msgviewer database...
+run
+# Updating msgviewer database...
+run
+# Updating msgviewer database...
+run
+# Updating msgviewer database...
+run -continue
+# Updating msgviewer database...
+run -continue
+# Updating msgviewer database...
+run
+# Updating msgviewer database...
+run
+# Updating msgviewer database...

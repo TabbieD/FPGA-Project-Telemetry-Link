@@ -1,0 +1,525 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\My_Projects\Telemetry\simulation\modelsim
+Eaccumulate
+Z1 w1532991467
+Z2 DPx4 ieee 15 std_logic_arith 0 22 GJbAT?7@hRQU9IQ702DT]2
+Z3 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z4 8C:/My_Projects/Telemetry/accumulate.vhd
+Z5 FC:/My_Projects/Telemetry/accumulate.vhd
+l0
+L8
+VPGBSbMHH;]UUE9ZNVeL^z3
+Z6 OV;C;6.5b;42
+31
+Z7 o-93 -work work -O0
+Z8 tExplicit 1
+!s100 _;z2g4>zLAa7@Bgz_zL=02
+Aarc_acccum
+R2
+R3
+DEx4 work 10 accumulate 0 22 PGBSbMHH;]UUE9ZNVeL^z3
+l20
+L16
+VaOP[62`^O8QUaTUJcoAL]0
+R6
+31
+Z9 Mx2 4 ieee 14 std_logic_1164
+Z10 Mx1 4 ieee 15 std_logic_arith
+R7
+R8
+!s100 3aZ_?3>gQDg`@T46LOTO40
+Eadder_nbit
+Z11 w1532987186
+R3
+Z12 8C:/My_Projects/Telemetry/adder_nbit.vhd
+Z13 FC:/My_Projects/Telemetry/adder_nbit.vhd
+l0
+L6
+VlV]BG<OYm;n=7<BhANjPc3
+R6
+31
+R7
+R8
+!s100 ^[_lnjS4YJg@j<VG33fzG1
+Aarc_add
+R3
+DEx4 work 10 adder_nbit 0 22 lV]BG<OYm;n=7<BhANjPc3
+l18
+L14
+VXA23QdJlB=P]ATgYAAb1X1
+R6
+31
+Z14 Mx1 4 ieee 14 std_logic_1164
+R7
+R8
+!s100 VDNBbG6YC:Gi?FBbERUW21
+Ebfsk_demod
+Z15 w1532990292
+R2
+R3
+Z16 8C:/My_Projects/Telemetry/bfsk_demod.vhd
+Z17 FC:/My_Projects/Telemetry/bfsk_demod.vhd
+l0
+L7
+VI0fEW`P0obYU;[D]a?TL]3
+R6
+31
+R7
+R8
+!s100 FR4zljDj5hlY_^?1^2=Ph2
+Aarc_bfsk
+R2
+R3
+DEx4 work 10 bfsk_demod 0 22 I0fEW`P0obYU;[D]a?TL]3
+l43
+L16
+V?>cH2Y:CiDmXiN;JXmJIz2
+R6
+31
+R9
+R10
+R7
+R8
+!s100 bKDllQ1=_VGP<mKE@:@Lg3
+Ebfsk_mod_ctrl
+Z18 w1532208263
+R3
+Z19 8C:/My_Projects/Telemetry/bfsk_mod_ctrl.vhd
+Z20 FC:/My_Projects/Telemetry/bfsk_mod_ctrl.vhd
+l0
+L5
+VB5kAJ7]FJf=[kaTHzhIMQ0
+R6
+31
+R7
+R8
+!s100 YPi3h8nH?CkNmlk;@O;_80
+Aa
+R3
+DEx4 work 13 bfsk_mod_ctrl 0 22 B5kAJ7]FJf=[kaTHzhIMQ0
+l17
+L15
+VFjBA<fD<<XO[dGNcd<i081
+R6
+31
+R14
+R7
+R8
+!s100 AchbJ9k5bmohCVZK`>=e=3
+Eclock_unit
+Z21 w1532204892
+Z22 DPx4 ieee 18 std_logic_unsigned 0 22 hEMVMlaNCR^<OOoVNV;m90
+R2
+R3
+Z23 8C:/My_Projects/Telemetry/clock_unit.vhd
+Z24 FC:/My_Projects/Telemetry/clock_unit.vhd
+l0
+L10
+Vo`73GJDlLSGX4dbnHz]KR2
+R6
+31
+R7
+R8
+!s100 OLG^Lbj9^9`h`BfNG^9AB3
+Aa
+R22
+R2
+R3
+DEx4 work 10 clock_unit 0 22 o`73GJDlLSGX4dbnHz]KR2
+l38
+L24
+VA>Gi6O0D60fV?kgVhlBdj2
+R6
+31
+Z25 Mx3 4 ieee 14 std_logic_1164
+Z26 Mx2 4 ieee 15 std_logic_arith
+Z27 Mx1 4 ieee 18 std_logic_unsigned
+R7
+R8
+!s100 PTnkM84;cFGSU7GBL3LL:2
+Edecision_dev
+Z28 w1532991612
+R2
+R3
+Z29 8C:/My_Projects/Telemetry/decision_dev.vhd
+Z30 FC:/My_Projects/Telemetry/decision_dev.vhd
+l0
+L7
+VJ2S976LHnP1gU0Rz]5iIU3
+R6
+31
+R7
+R8
+!s100 Ti=B=K2H5?dfW;Pn7HzKP0
+Aarc_decision
+R2
+R3
+DEx4 work 12 decision_dev 0 22 J2S976LHnP1gU0Rz]5iIU3
+l16
+L14
+V@_B3UUl:YelW7[TcaJ5U20
+R6
+31
+R9
+R10
+R7
+R8
+!s100 CdEiB28dEXz7gK=cGJ[Ei3
+Elut_cos
+Z31 w1532987931
+R3
+Z32 8C:/My_Projects/Telemetry/lut_cos.vhd
+Z33 FC:/My_Projects/Telemetry/lut_cos.vhd
+l0
+L6
+Va9NSAR<3QTg]Yfb8h]L=a2
+R6
+31
+R7
+R8
+!s100 UcTi446S7:LHlhHn9VVgG2
+Aarc_lut
+R3
+DEx4 work 7 lut_cos 0 22 a9NSAR<3QTg]Yfb8h]L=a2
+l18
+L16
+V^`lOKJT0<C5YXF6D<jDWo0
+R6
+31
+R14
+R7
+R8
+!s100 D4cf68m]FT1EZ>Da8UWJ=3
+Emanchester_decoder
+Z34 w1532991862
+R22
+R2
+R3
+Z35 8C:/My_Projects/Telemetry/manchester_decoder.vhd
+Z36 FC:/My_Projects/Telemetry/manchester_decoder.vhd
+l0
+L10
+VjJJok0:zOBg7nPlCe5UX73
+R6
+31
+R7
+R8
+!s100 QKmTWf40H:nM2V282bLQe2
+Abehave
+R22
+R2
+R3
+DEx4 work 18 manchester_decoder 0 22 jJJok0:zOBg7nPlCe5UX73
+l24
+L20
+V?oSma;SToF;JL0AIBO9zT1
+R6
+31
+R25
+R26
+R27
+R7
+R8
+!s100 7<26_kHbg3nbBf;VW5@O[2
+Emanchester_encoder
+Z37 w1532207694
+R22
+R2
+R3
+Z38 8C:/My_Projects/Telemetry/manchester_encoder.vhd
+Z39 FC:/My_Projects/Telemetry/manchester_encoder.vhd
+l0
+L8
+Vk^U4z?]]WeO@2Q=meS=X^1
+R6
+31
+R7
+R8
+!s100 nK3h>Kmj074RlB]?0bX522
+Ab
+R22
+R2
+R3
+DEx4 work 18 manchester_encoder 0 22 k^U4z?]]WeO@2Q=meS=X^1
+l24
+L20
+Vmhd`MUL9`D:B]aOoa6JGl2
+R6
+31
+R25
+R26
+R27
+R7
+R8
+!s100 g9zEEgl^[>IWZ^7Nc<=`O0
+Emultiply
+Z40 w1532990860
+R2
+R3
+Z41 8C:/My_Projects/Telemetry/multiply.vhd
+Z42 FC:/My_Projects/Telemetry/multiply.vhd
+l0
+L7
+VD[M3UAo<_43=bQ:H4YfdY2
+R6
+31
+R7
+R8
+!s100 `U9@X2<O6?hE=eoZ43KkQ1
+Abehavioral
+R2
+R3
+DEx4 work 8 multiply 0 22 D[M3UAo<_43=bQ:H4YfdY2
+l17
+L15
+VAQ0CU[NV@iCBc;k4ZJIYL0
+R6
+31
+R9
+R10
+R7
+R8
+!s100 dZmMoKKX;bW?`XmeA9P;m0
+Ephase_acc
+Z43 w1532985240
+R3
+Z44 8C:/My_Projects/Telemetry/phase_acc.vhd
+Z45 FC:/My_Projects/Telemetry/phase_acc.vhd
+l0
+L7
+VVOjfR_bVFf]N>Y=Yg:6Y42
+R6
+31
+R7
+R8
+!s100 7PP0::O?fVAl6UL^MIg;T3
+Aa
+R3
+DEx4 work 9 phase_acc 0 22 VOjfR_bVFf]N>Y=Yg:6Y42
+l36
+L17
+VKb>7V0PQ4OE5U9h[N8lP41
+R6
+31
+R14
+R7
+R8
+!s100 ?[dD?hlZ2[j7LeDO3^jh;1
+Epipo_nbit
+Z46 w1532986556
+R3
+Z47 8C:/My_Projects/Telemetry/pipo_nbit.vhd
+Z48 FC:/My_Projects/Telemetry/pipo_nbit.vhd
+l0
+L6
+VTOTcGSM:9C92XFlgW9hRS3
+R6
+31
+R7
+R8
+!s100 EJ@EA2Y35NC=YzSh7WkTk3
+Ab
+R3
+DEx4 work 9 pipo_nbit 0 22 TOTcGSM:9C92XFlgW9hRS3
+l17
+L16
+V7g_Q[7EX[a9LP^Q7GX1_C0
+R6
+31
+R14
+R7
+R8
+!s100 @R[Z0537zN3M1aRKgMlU_3
+Erx_carrier_gen
+Z49 w1532990707
+R3
+Z50 8C:/My_Projects/Telemetry/rx_carrier_gen.vhd
+Z51 FC:/My_Projects/Telemetry/rx_carrier_gen.vhd
+l0
+L6
+VDGK0PbMe[W@`TC4J_e3EX0
+R6
+31
+R7
+R8
+!s100 88:80nC6_Zl8bP@lN5BMh1
+Abehave
+R3
+DEx4 work 14 rx_carrier_gen 0 22 DGK0PbMe[W@`TC4J_e3EX0
+l31
+L14
+VjJfnURoI]9BK[AR_cJ9]=2
+R6
+31
+R14
+R7
+R8
+!s100 <5N2gzQO81OglhM9MSkei2
+Erx_clock_unit
+Z52 w1532993175
+R22
+R2
+R3
+Z53 8C:/My_Projects/Telemetry/rx_clock_unit.vhd
+Z54 FC:/My_Projects/Telemetry/rx_clock_unit.vhd
+l0
+L10
+VJjiK3f2U^7iWnR]JM^^?l0
+R6
+31
+R7
+R8
+!s100 nm5Pa5Y3YUKN3GY2=e=Nm1
+Abehav
+R22
+R2
+R3
+DEx4 work 13 rx_clock_unit 0 22 JjiK3f2U^7iWnR]JM^^?l0
+l30
+L19
+VBfkj`zQ7Q_0Ta@hG:E2JI0
+R6
+31
+R25
+R26
+R27
+R7
+R8
+!s100 Q_P=08D;940V<TZPFmJVd1
+Et_ff
+Z55 w1532205435
+R3
+Z56 8C:/My_Projects/Telemetry/T_ff.vhd
+Z57 FC:/My_Projects/Telemetry/T_ff.vhd
+l0
+L6
+VP`[F>AhelXG5Zmb@PXIc02
+R6
+31
+R7
+R8
+!s100 BMgY>fNPIM>3NZ@lLLCV<0
+Ab
+R3
+DEx4 work 4 t_ff 0 22 P`[F>AhelXG5Zmb@PXIc02
+l24
+L19
+VNc[QGUjE[coYaYfWE41N32
+R6
+31
+R14
+R7
+R8
+!s100 `I^WL_ckBNJnM]n@W5dmc0
+Etelemetry_link
+Z58 w1532993951
+R3
+Z59 8C:/My_Projects/Telemetry/Telemetry_link.vhd
+Z60 FC:/My_Projects/Telemetry/Telemetry_link.vhd
+l0
+L6
+Vk[RM?]`6=cDdYGTRz[@<F0
+R6
+31
+R7
+R8
+!s100 73S@0ib=]5OmW`9WVgOaQ0
+Abehavioral
+R3
+DEx4 work 14 telemetry_link 0 22 k[RM?]`6=cDdYGTRz[@<F0
+l38
+L19
+V3g_LdIM`b5Rlj>?>Ai]b]3
+R6
+31
+R14
+R7
+R8
+!s100 _0z29]RHeXL;nj=D]0KK72
+Etelemetry_link_vhd_tst
+Z61 w1533000663
+Z62 DPx4 ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+R2
+R22
+R3
+Z63 8C:/My_Projects/Telemetry/simulation/modelsim/telemetry_link.vht
+Z64 FC:/My_Projects/Telemetry/simulation/modelsim/telemetry_link.vht
+l0
+L32
+VAF@I5a_mkOm<1Vka<N4Bc3
+R6
+31
+R7
+R8
+!s100 PN0_C2_6LW_;0a?PTTTLi3
+Atelemetry_link_arch
+R62
+R2
+R22
+R3
+DEx4 work 22 telemetry_link_vhd_tst 0 22 AF@I5a_mkOm<1Vka<N4Bc3
+l56
+L35
+V=b1Mn:XJkN@F=mB9aZJ>Z3
+R6
+31
+Mx4 4 ieee 14 std_logic_1164
+Mx3 4 ieee 18 std_logic_unsigned
+R26
+Mx1 4 ieee 11 numeric_std
+R7
+R8
+!s100 YJV7I:nV54DaNjjidNg]13
+Etelemetry_rx
+Z65 w1532993012
+R3
+Z66 8C:/My_Projects/Telemetry/telemetry_rx.vhd
+Z67 FC:/My_Projects/Telemetry/telemetry_rx.vhd
+l0
+L6
+Vj`>DfJ0NDm28RR:@6KFh<1
+R6
+31
+R7
+R8
+!s100 <oL5A@]IT^>lmoQA6JB6M2
+Aarc_telemetry_rx
+R3
+DEx4 work 12 telemetry_rx 0 22 j`>DfJ0NDm28RR:@6KFh<1
+l39
+L14
+VT7BTjeaaU0[6TKVDfNYkD0
+!s100 UC@>hTK;9Fe1<lX38VnHl1
+R6
+31
+R14
+R7
+R8
+Etelemetry_tx
+Z68 w1532993272
+R3
+Z69 8C:/My_Projects/Telemetry/telemetry_tx.vhd
+Z70 FC:/My_Projects/Telemetry/telemetry_tx.vhd
+l0
+L6
+Vhg@Z8<:Y^ki4PR:XA_0jP3
+!s100 BYXA9YFincn`X]jznf3:b1
+R6
+31
+R7
+R8
+Aarc_tx
+R3
+Z71 DEx4 work 12 telemetry_tx 0 22 hg@Z8<:Y^ki4PR:XA_0jP3
+l50
+L16
+Z72 VQ093CDdZS0bNS[Nn;FVaO3
+Z73 !s100 =C>L`T9O<8Nco2TgeOSa13
+R6
+31
+R14
+R7
+R8
