@@ -1,0 +1,4 @@
+v1
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,telemetry_rx:TELE_RX|bfsk_demod:RX_DEMOD|multiply:mul0|lpm_mult:Mult0|mult_dus:auto_generated|mac_out2,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,telemetry_rx:TELE_RX|bfsk_demod:RX_DEMOD|multiply:mul1|lpm_mult:Mult0|mult_dus:auto_generated|mac_out2,
+PORT_SWAPPING,PORT_SWAPPING_FINISHED,telemetry_rx:TELE_RX|bfsk_demod:RX_DEMOD|multiply:mul1|lpm_mult:Mult0|mult_dus:auto_generated|mac_mult1,

@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="Telemetry_link">
+		<CBX_INST_ENTRY INSTANCE_NAME="|telemetry_link|telemetry_rx:TELE_RX|bfsk_demod:RX_DEMOD|multiply:mul0|lpm_mult:Mult0" CBX_FILE_NAME="mult_dus.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|telemetry_link|telemetry_rx:TELE_RX|bfsk_demod:RX_DEMOD|multiply:mul1|lpm_mult:Mult0" CBX_FILE_NAME="mult_dus.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

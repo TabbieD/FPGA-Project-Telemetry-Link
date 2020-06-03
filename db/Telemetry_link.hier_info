@@ -1,0 +1,1010 @@
+|Telemetry_link
+tx_master_clk => telemetry_tx:TELE_TX.master_clk
+reset => telemetry_tx:TELE_TX.reset
+reset => telemetry_rx:TELE_RX.reset
+data_in => telemetry_tx:TELE_TX.data_in
+rx_master_clk => telemetry_rx:TELE_RX.master_clk
+transmitter_out[0] <= telemetry_tx:TELE_TX.bfsk_mod_out[0]
+transmitter_out[1] <= telemetry_tx:TELE_TX.bfsk_mod_out[1]
+transmitter_out[2] <= telemetry_tx:TELE_TX.bfsk_mod_out[2]
+transmitter_out[3] <= telemetry_tx:TELE_TX.bfsk_mod_out[3]
+transmitter_out[4] <= telemetry_tx:TELE_TX.bfsk_mod_out[4]
+transmitter_out[5] <= telemetry_tx:TELE_TX.bfsk_mod_out[5]
+recieved_bfsk_signal[0] <= telemetry_tx:TELE_TX.bfsk_mod_out[0]
+recieved_bfsk_signal[1] <= telemetry_tx:TELE_TX.bfsk_mod_out[1]
+recieved_bfsk_signal[2] <= telemetry_tx:TELE_TX.bfsk_mod_out[2]
+recieved_bfsk_signal[3] <= telemetry_tx:TELE_TX.bfsk_mod_out[3]
+recieved_bfsk_signal[4] <= telemetry_tx:TELE_TX.bfsk_mod_out[4]
+recieved_bfsk_signal[5] <= telemetry_tx:TELE_TX.bfsk_mod_out[5]
+data_out <= telemetry_rx:TELE_RX.dout
+
+
+|Telemetry_link|telemetry_tx:TELE_TX
+reset => clock_unit:CLK_DISTR.reset
+reset => manchester_encoder:MAC_ENC.reset
+reset => phase_acc:DIGITAL_PHASE_GEN.reset
+reset => LUT_cos:COS_ROM.reset
+master_clk => clock_unit:CLK_DISTR.clk_in
+data_in => manchester_encoder:MAC_ENC.din
+bfsk_mod_out[0] <= LUT_cos:COS_ROM.amp_bits[0]
+bfsk_mod_out[1] <= LUT_cos:COS_ROM.amp_bits[1]
+bfsk_mod_out[2] <= LUT_cos:COS_ROM.amp_bits[2]
+bfsk_mod_out[3] <= LUT_cos:COS_ROM.amp_bits[3]
+bfsk_mod_out[4] <= LUT_cos:COS_ROM.amp_bits[4]
+bfsk_mod_out[5] <= LUT_cos:COS_ROM.amp_bits[5]
+
+
+|Telemetry_link|telemetry_tx:TELE_TX|clock_unit:CLK_DISTR
+clk_in => clk_128x.DATAA
+clk_in => T_ff:div1.clk
+clk_in => clk_2x_buf.CLK
+reset => T_ff:div1.rst
+reset => T_ff:div2.rst
+reset => T_ff:div3.rst
+reset => T_ff:div4.rst
+reset => T_ff:div5.rst
+reset => T_ff:div6.rst
+reset => T_ff:div7.rst
+reset => clk_1x.OUTPUTSELECT
+reset => clk_2x.OUTPUTSELECT
+reset => clk_128x.OUTPUTSELECT
+reset => clk_2x_buf.ACLR
+reset => clk_1x_buf.ACLR
+clk_1x <= clk_1x.DB_MAX_OUTPUT_PORT_TYPE
+clk_2x <= clk_2x.DB_MAX_OUTPUT_PORT_TYPE
+clk_128x <= clk_128x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Telemetry_link|telemetry_tx:TELE_TX|clock_unit:CLK_DISTR|T_ff:div1
+clk => q0.CLK
+rst => q0.ACLR
+q <= q0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Telemetry_link|telemetry_tx:TELE_TX|clock_unit:CLK_DISTR|T_ff:div2
+clk => q0.CLK
+rst => q0.ACLR
+q <= q0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Telemetry_link|telemetry_tx:TELE_TX|clock_unit:CLK_DISTR|T_ff:div3
+clk => q0.CLK
+rst => q0.ACLR
+q <= q0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Telemetry_link|telemetry_tx:TELE_TX|clock_unit:CLK_DISTR|T_ff:div4
+clk => q0.CLK
+rst => q0.ACLR
+q <= q0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Telemetry_link|telemetry_tx:TELE_TX|clock_unit:CLK_DISTR|T_ff:div5
+clk => q0.CLK
+rst => q0.ACLR
+q <= q0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Telemetry_link|telemetry_tx:TELE_TX|clock_unit:CLK_DISTR|T_ff:div6
+clk => q0.CLK
+rst => q0.ACLR
+q <= q0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Telemetry_link|telemetry_tx:TELE_TX|clock_unit:CLK_DISTR|T_ff:div7
+clk => q0.CLK
+rst => q0.ACLR
+q <= q0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Telemetry_link|telemetry_tx:TELE_TX|manchester_encoder:MAC_ENC
+clk_1x => mdo.IN1
+clk_1x => din_buf.CLK
+clk_2x => mdo~reg0.CLK
+din => din_buf.DATAIN
+reset => mdo~reg0.ACLR
+reset => din_buf.ACLR
+mdo <= mdo~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Telemetry_link|telemetry_tx:TELE_TX|bfsk_mod_ctrl:MOD_CNTRL
+manch_enc_data => phase_inc_value[1].DATAIN
+manch_enc_data => phase_inc_value[0].DATAIN
+phase_inc_value[0] <= manch_enc_data.DB_MAX_OUTPUT_PORT_TYPE
+phase_inc_value[1] <= manch_enc_data.DB_MAX_OUTPUT_PORT_TYPE
+phase_inc_value[2] <= <GND>
+phase_inc_value[3] <= <GND>
+phase_inc_value[4] <= <GND>
+phase_inc_value[5] <= <GND>
+
+
+|Telemetry_link|telemetry_tx:TELE_TX|phase_acc:DIGITAL_PHASE_GEN
+clk => pipo_nbit:phase_inc_reg.clk
+clk => delayed_clk_2x.CLK
+clk => pipo_nbit:phase_reg.clk
+reset => pipo_nbit:phase_inc_reg.reset
+clk_2x => local_rst.IN1
+clk_2x => delayed_clk_2x.DATAIN
+phase_inc_word[0] => pipo_nbit:phase_inc_reg.x[0]
+phase_inc_word[1] => pipo_nbit:phase_inc_reg.x[1]
+phase_inc_word[2] => pipo_nbit:phase_inc_reg.x[2]
+phase_inc_word[3] => pipo_nbit:phase_inc_reg.x[3]
+phase_inc_word[4] => pipo_nbit:phase_inc_reg.x[4]
+phase_inc_word[5] => pipo_nbit:phase_inc_reg.x[5]
+phase_out[0] <= pipo_nbit:phase_reg.y[0]
+phase_out[1] <= pipo_nbit:phase_reg.y[1]
+phase_out[2] <= pipo_nbit:phase_reg.y[2]
+phase_out[3] <= pipo_nbit:phase_reg.y[3]
+phase_out[4] <= pipo_nbit:phase_reg.y[4]
+phase_out[5] <= pipo_nbit:phase_reg.y[5]
+
+
+|Telemetry_link|telemetry_tx:TELE_TX|phase_acc:DIGITAL_PHASE_GEN|pipo_nbit:phase_inc_reg
+clk => y[0]~reg0.CLK
+clk => y[1]~reg0.CLK
+clk => y[2]~reg0.CLK
+clk => y[3]~reg0.CLK
+clk => y[4]~reg0.CLK
+clk => y[5]~reg0.CLK
+reset => y[0]~reg0.ACLR
+reset => y[1]~reg0.ACLR
+reset => y[2]~reg0.ACLR
+reset => y[3]~reg0.ACLR
+reset => y[4]~reg0.ACLR
+reset => y[5]~reg0.ACLR
+x[0] => y[0]~reg0.DATAIN
+x[1] => y[1]~reg0.DATAIN
+x[2] => y[2]~reg0.DATAIN
+x[3] => y[3]~reg0.DATAIN
+x[4] => y[4]~reg0.DATAIN
+x[5] => y[5]~reg0.DATAIN
+y[0] <= y[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[4] <= y[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[5] <= y[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Telemetry_link|telemetry_tx:TELE_TX|phase_acc:DIGITAL_PHASE_GEN|adder_nbit:accumulator
+a[0] => z.IN0
+a[0] => temp_carry.IN0
+a[1] => z.IN0
+a[1] => temp_carry.IN0
+a[1] => temp_carry.IN1
+a[2] => z.IN0
+a[2] => temp_carry.IN0
+a[2] => temp_carry.IN1
+a[3] => z.IN0
+a[3] => temp_carry.IN0
+a[3] => temp_carry.IN1
+a[4] => z.IN0
+a[4] => temp_carry.IN0
+a[4] => temp_carry.IN1
+a[5] => z.IN0
+b[0] => z.IN1
+b[0] => temp_carry.IN1
+b[1] => z.IN1
+b[1] => temp_carry.IN1
+b[1] => temp_carry.IN1
+b[2] => z.IN1
+b[2] => temp_carry.IN1
+b[2] => temp_carry.IN1
+b[3] => z.IN1
+b[3] => temp_carry.IN1
+b[3] => temp_carry.IN1
+b[4] => z.IN1
+b[4] => temp_carry.IN1
+b[4] => temp_carry.IN1
+b[5] => z.IN1
+z[0] <= z.DB_MAX_OUTPUT_PORT_TYPE
+z[1] <= z.DB_MAX_OUTPUT_PORT_TYPE
+z[2] <= z.DB_MAX_OUTPUT_PORT_TYPE
+z[3] <= z.DB_MAX_OUTPUT_PORT_TYPE
+z[4] <= z.DB_MAX_OUTPUT_PORT_TYPE
+z[5] <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Telemetry_link|telemetry_tx:TELE_TX|phase_acc:DIGITAL_PHASE_GEN|pipo_nbit:phase_reg
+clk => y[0]~reg0.CLK
+clk => y[1]~reg0.CLK
+clk => y[2]~reg0.CLK
+clk => y[3]~reg0.CLK
+clk => y[4]~reg0.CLK
+clk => y[5]~reg0.CLK
+reset => y[0]~reg0.ACLR
+reset => y[1]~reg0.ACLR
+reset => y[2]~reg0.ACLR
+reset => y[3]~reg0.ACLR
+reset => y[4]~reg0.ACLR
+reset => y[5]~reg0.ACLR
+x[0] => y[0]~reg0.DATAIN
+x[1] => y[1]~reg0.DATAIN
+x[2] => y[2]~reg0.DATAIN
+x[3] => y[3]~reg0.DATAIN
+x[4] => y[4]~reg0.DATAIN
+x[5] => y[5]~reg0.DATAIN
+y[0] <= y[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[4] <= y[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[5] <= y[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Telemetry_link|telemetry_tx:TELE_TX|lut_cos:COS_ROM
+clk => temp_amp[0].CLK
+clk => temp_amp[1].CLK
+clk => temp_amp[2].CLK
+clk => temp_amp[3].CLK
+clk => temp_amp[4].CLK
+clk => temp_amp[5].CLK
+clk => amp_bits[0]~reg0.CLK
+clk => amp_bits[1]~reg0.CLK
+clk => amp_bits[2]~reg0.CLK
+clk => amp_bits[3]~reg0.CLK
+clk => amp_bits[4]~reg0.CLK
+clk => amp_bits[5]~reg0.CLK
+reset => temp_amp[0].ACLR
+reset => temp_amp[1].ACLR
+reset => temp_amp[2].ACLR
+reset => temp_amp[3].ACLR
+reset => temp_amp[4].ACLR
+reset => temp_amp[5].ACLR
+reset => amp_bits[5]~reg0.ENA
+reset => amp_bits[4]~reg0.ENA
+reset => amp_bits[3]~reg0.ENA
+reset => amp_bits[2]~reg0.ENA
+reset => amp_bits[1]~reg0.ENA
+reset => amp_bits[0]~reg0.ENA
+phase_bits[0] => Mux0.IN69
+phase_bits[0] => Mux1.IN69
+phase_bits[0] => Mux2.IN69
+phase_bits[0] => Mux3.IN69
+phase_bits[0] => Mux4.IN69
+phase_bits[0] => Mux5.IN69
+phase_bits[1] => Mux0.IN68
+phase_bits[1] => Mux1.IN68
+phase_bits[1] => Mux2.IN68
+phase_bits[1] => Mux3.IN68
+phase_bits[1] => Mux4.IN68
+phase_bits[1] => Mux5.IN68
+phase_bits[2] => Mux0.IN67
+phase_bits[2] => Mux1.IN67
+phase_bits[2] => Mux2.IN67
+phase_bits[2] => Mux3.IN67
+phase_bits[2] => Mux4.IN67
+phase_bits[2] => Mux5.IN67
+phase_bits[3] => Mux0.IN66
+phase_bits[3] => Mux1.IN66
+phase_bits[3] => Mux2.IN66
+phase_bits[3] => Mux3.IN66
+phase_bits[3] => Mux4.IN66
+phase_bits[3] => Mux5.IN66
+phase_bits[4] => Mux0.IN65
+phase_bits[4] => Mux1.IN65
+phase_bits[4] => Mux2.IN65
+phase_bits[4] => Mux3.IN65
+phase_bits[4] => Mux4.IN65
+phase_bits[4] => Mux5.IN65
+phase_bits[5] => Mux0.IN64
+phase_bits[5] => Mux1.IN64
+phase_bits[5] => Mux2.IN64
+phase_bits[5] => Mux3.IN64
+phase_bits[5] => Mux4.IN64
+phase_bits[5] => Mux5.IN64
+amp_bits[0] <= amp_bits[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+amp_bits[1] <= amp_bits[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+amp_bits[2] <= amp_bits[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+amp_bits[3] <= amp_bits[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+amp_bits[4] <= amp_bits[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+amp_bits[5] <= amp_bits[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Telemetry_link|telemetry_rx:TELE_RX
+dout <= manchester_decoder:umanchester_decoder.dout
+input_signal[0] => bfsk_demod:RX_DEMOD.bfsk_signal_in[0]
+input_signal[1] => bfsk_demod:RX_DEMOD.bfsk_signal_in[1]
+input_signal[2] => bfsk_demod:RX_DEMOD.bfsk_signal_in[2]
+input_signal[3] => bfsk_demod:RX_DEMOD.bfsk_signal_in[3]
+input_signal[4] => bfsk_demod:RX_DEMOD.bfsk_signal_in[4]
+input_signal[5] => bfsk_demod:RX_DEMOD.bfsk_signal_in[5]
+master_clk => rx_clock_unit:RX_CLK_CKT.clk_in
+reset => rx_clock_unit:RX_CLK_CKT.reset
+reset => bfsk_demod:RX_DEMOD.reset
+reset => manchester_decoder:umanchester_decoder.reset
+
+
+|Telemetry_link|telemetry_rx:TELE_RX|rx_clock_unit:RX_CLK_CKT
+clk_in => clk_128x.DATAA
+clk_in => T_ff:div1.clk
+clk_in => clk_2x_buf.CLK
+reset => T_ff:div1.rst
+reset => T_ff:div2.rst
+reset => T_ff:div3.rst
+reset => T_ff:div4.rst
+reset => T_ff:div5.rst
+reset => T_ff:div6.rst
+reset => T_ff:div7.rst
+reset => clk_1x.OUTPUTSELECT
+reset => clk_2x.OUTPUTSELECT
+reset => clk_128x.OUTPUTSELECT
+reset => clk_2x_buf.ACLR
+reset => clk_1x_buf.ACLR
+clk_1x <= clk_1x.DB_MAX_OUTPUT_PORT_TYPE
+clk_2x <= clk_2x.DB_MAX_OUTPUT_PORT_TYPE
+clk_128x <= clk_128x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Telemetry_link|telemetry_rx:TELE_RX|rx_clock_unit:RX_CLK_CKT|T_ff:div1
+clk => q0.CLK
+rst => q0.ACLR
+q <= q0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Telemetry_link|telemetry_rx:TELE_RX|rx_clock_unit:RX_CLK_CKT|T_ff:div2
+clk => q0.CLK
+rst => q0.ACLR
+q <= q0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Telemetry_link|telemetry_rx:TELE_RX|rx_clock_unit:RX_CLK_CKT|T_ff:div3
+clk => q0.CLK
+rst => q0.ACLR
+q <= q0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Telemetry_link|telemetry_rx:TELE_RX|rx_clock_unit:RX_CLK_CKT|T_ff:div4
+clk => q0.CLK
+rst => q0.ACLR
+q <= q0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Telemetry_link|telemetry_rx:TELE_RX|rx_clock_unit:RX_CLK_CKT|T_ff:div5
+clk => q0.CLK
+rst => q0.ACLR
+q <= q0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Telemetry_link|telemetry_rx:TELE_RX|rx_clock_unit:RX_CLK_CKT|T_ff:div6
+clk => q0.CLK
+rst => q0.ACLR
+q <= q0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Telemetry_link|telemetry_rx:TELE_RX|rx_clock_unit:RX_CLK_CKT|T_ff:div7
+clk => q0.CLK
+rst => q0.ACLR
+q <= q0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Telemetry_link|telemetry_rx:TELE_RX|bfsk_demod:RX_DEMOD
+clk => rx_carrier_gen:accumulator_rx_lo.clk
+clk => delayed_clk_2x.CLK
+clk => accumulate:acc0.clk
+clk => accumulate:acc1.clk
+reset => rx_carrier_gen:accumulator_rx_lo.reset
+clk_2x => local_rst.IN1
+clk_2x => rx_carrier_gen:accumulator_rx_lo.clk_2x
+clk_2x => delayed_clk_2x.DATAIN
+bfsk_signal_in[0] => multiply:mul0.b[0]
+bfsk_signal_in[0] => multiply:mul1.b[0]
+bfsk_signal_in[1] => multiply:mul0.b[1]
+bfsk_signal_in[1] => multiply:mul1.b[1]
+bfsk_signal_in[2] => multiply:mul0.b[2]
+bfsk_signal_in[2] => multiply:mul1.b[2]
+bfsk_signal_in[3] => multiply:mul0.b[3]
+bfsk_signal_in[3] => multiply:mul1.b[3]
+bfsk_signal_in[4] => multiply:mul0.b[4]
+bfsk_signal_in[4] => multiply:mul1.b[4]
+bfsk_signal_in[5] => multiply:mul0.b[5]
+bfsk_signal_in[5] => multiply:mul1.b[5]
+demod_data_out <= decision_dev:dec_dev.out_bit
+
+
+|Telemetry_link|telemetry_rx:TELE_RX|bfsk_demod:RX_DEMOD|rx_carrier_gen:accumulator_rx_lo
+reset => phase_acc:digital_phase_gen0.reset
+reset => phase_acc:digital_phase_gen1.reset
+reset => lut_cos:cos_rom0.reset
+reset => lut_cos:cos_rom1.reset
+clk => phase_acc:digital_phase_gen0.clk
+clk => phase_acc:digital_phase_gen1.clk
+clk => lut_cos:cos_rom0.clk
+clk => lut_cos:cos_rom1.clk
+clk_2x => phase_acc:digital_phase_gen0.clk_2x
+clk_2x => phase_acc:digital_phase_gen1.clk_2x
+symbol_0_carrier[0] <= lut_cos:cos_rom0.amp_bits[0]
+symbol_0_carrier[1] <= lut_cos:cos_rom0.amp_bits[1]
+symbol_0_carrier[2] <= lut_cos:cos_rom0.amp_bits[2]
+symbol_0_carrier[3] <= lut_cos:cos_rom0.amp_bits[3]
+symbol_0_carrier[4] <= lut_cos:cos_rom0.amp_bits[4]
+symbol_0_carrier[5] <= lut_cos:cos_rom0.amp_bits[5]
+symbol_1_carrier[0] <= lut_cos:cos_rom1.amp_bits[0]
+symbol_1_carrier[1] <= lut_cos:cos_rom1.amp_bits[1]
+symbol_1_carrier[2] <= lut_cos:cos_rom1.amp_bits[2]
+symbol_1_carrier[3] <= lut_cos:cos_rom1.amp_bits[3]
+symbol_1_carrier[4] <= lut_cos:cos_rom1.amp_bits[4]
+symbol_1_carrier[5] <= lut_cos:cos_rom1.amp_bits[5]
+
+
+|Telemetry_link|telemetry_rx:TELE_RX|bfsk_demod:RX_DEMOD|rx_carrier_gen:accumulator_rx_lo|phase_acc:digital_phase_gen0
+clk => pipo_nbit:phase_inc_reg.clk
+clk => delayed_clk_2x.CLK
+clk => pipo_nbit:phase_reg.clk
+reset => pipo_nbit:phase_inc_reg.reset
+clk_2x => local_rst.IN1
+clk_2x => delayed_clk_2x.DATAIN
+phase_inc_word[0] => pipo_nbit:phase_inc_reg.x[0]
+phase_inc_word[1] => pipo_nbit:phase_inc_reg.x[1]
+phase_inc_word[2] => pipo_nbit:phase_inc_reg.x[2]
+phase_inc_word[3] => pipo_nbit:phase_inc_reg.x[3]
+phase_inc_word[4] => pipo_nbit:phase_inc_reg.x[4]
+phase_inc_word[5] => pipo_nbit:phase_inc_reg.x[5]
+phase_out[0] <= pipo_nbit:phase_reg.y[0]
+phase_out[1] <= pipo_nbit:phase_reg.y[1]
+phase_out[2] <= pipo_nbit:phase_reg.y[2]
+phase_out[3] <= pipo_nbit:phase_reg.y[3]
+phase_out[4] <= pipo_nbit:phase_reg.y[4]
+phase_out[5] <= pipo_nbit:phase_reg.y[5]
+
+
+|Telemetry_link|telemetry_rx:TELE_RX|bfsk_demod:RX_DEMOD|rx_carrier_gen:accumulator_rx_lo|phase_acc:digital_phase_gen0|pipo_nbit:phase_inc_reg
+clk => y[0]~reg0.CLK
+clk => y[1]~reg0.CLK
+clk => y[2]~reg0.CLK
+clk => y[3]~reg0.CLK
+clk => y[4]~reg0.CLK
+clk => y[5]~reg0.CLK
+reset => y[0]~reg0.ACLR
+reset => y[1]~reg0.ACLR
+reset => y[2]~reg0.ACLR
+reset => y[3]~reg0.ACLR
+reset => y[4]~reg0.ACLR
+reset => y[5]~reg0.ACLR
+x[0] => y[0]~reg0.DATAIN
+x[1] => y[1]~reg0.DATAIN
+x[2] => y[2]~reg0.DATAIN
+x[3] => y[3]~reg0.DATAIN
+x[4] => y[4]~reg0.DATAIN
+x[5] => y[5]~reg0.DATAIN
+y[0] <= y[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[4] <= y[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[5] <= y[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Telemetry_link|telemetry_rx:TELE_RX|bfsk_demod:RX_DEMOD|rx_carrier_gen:accumulator_rx_lo|phase_acc:digital_phase_gen0|adder_nbit:accumulator
+a[0] => z.IN0
+a[0] => temp_carry.IN0
+a[1] => z.IN0
+a[1] => temp_carry.IN0
+a[1] => temp_carry.IN1
+a[2] => z.IN0
+a[2] => temp_carry.IN0
+a[2] => temp_carry.IN1
+a[3] => z.IN0
+a[3] => temp_carry.IN0
+a[3] => temp_carry.IN1
+a[4] => z.IN0
+a[4] => temp_carry.IN0
+a[4] => temp_carry.IN1
+a[5] => z.IN0
+b[0] => z.IN1
+b[0] => temp_carry.IN1
+b[1] => z.IN1
+b[1] => temp_carry.IN1
+b[1] => temp_carry.IN1
+b[2] => z.IN1
+b[2] => temp_carry.IN1
+b[2] => temp_carry.IN1
+b[3] => z.IN1
+b[3] => temp_carry.IN1
+b[3] => temp_carry.IN1
+b[4] => z.IN1
+b[4] => temp_carry.IN1
+b[4] => temp_carry.IN1
+b[5] => z.IN1
+z[0] <= z.DB_MAX_OUTPUT_PORT_TYPE
+z[1] <= z.DB_MAX_OUTPUT_PORT_TYPE
+z[2] <= z.DB_MAX_OUTPUT_PORT_TYPE
+z[3] <= z.DB_MAX_OUTPUT_PORT_TYPE
+z[4] <= z.DB_MAX_OUTPUT_PORT_TYPE
+z[5] <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Telemetry_link|telemetry_rx:TELE_RX|bfsk_demod:RX_DEMOD|rx_carrier_gen:accumulator_rx_lo|phase_acc:digital_phase_gen0|pipo_nbit:phase_reg
+clk => y[0]~reg0.CLK
+clk => y[1]~reg0.CLK
+clk => y[2]~reg0.CLK
+clk => y[3]~reg0.CLK
+clk => y[4]~reg0.CLK
+clk => y[5]~reg0.CLK
+reset => y[0]~reg0.ACLR
+reset => y[1]~reg0.ACLR
+reset => y[2]~reg0.ACLR
+reset => y[3]~reg0.ACLR
+reset => y[4]~reg0.ACLR
+reset => y[5]~reg0.ACLR
+x[0] => y[0]~reg0.DATAIN
+x[1] => y[1]~reg0.DATAIN
+x[2] => y[2]~reg0.DATAIN
+x[3] => y[3]~reg0.DATAIN
+x[4] => y[4]~reg0.DATAIN
+x[5] => y[5]~reg0.DATAIN
+y[0] <= y[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[4] <= y[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[5] <= y[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Telemetry_link|telemetry_rx:TELE_RX|bfsk_demod:RX_DEMOD|rx_carrier_gen:accumulator_rx_lo|phase_acc:digital_phase_gen1
+clk => pipo_nbit:phase_inc_reg.clk
+clk => delayed_clk_2x.CLK
+clk => pipo_nbit:phase_reg.clk
+reset => pipo_nbit:phase_inc_reg.reset
+clk_2x => local_rst.IN1
+clk_2x => delayed_clk_2x.DATAIN
+phase_inc_word[0] => pipo_nbit:phase_inc_reg.x[0]
+phase_inc_word[1] => pipo_nbit:phase_inc_reg.x[1]
+phase_inc_word[2] => pipo_nbit:phase_inc_reg.x[2]
+phase_inc_word[3] => pipo_nbit:phase_inc_reg.x[3]
+phase_inc_word[4] => pipo_nbit:phase_inc_reg.x[4]
+phase_inc_word[5] => pipo_nbit:phase_inc_reg.x[5]
+phase_out[0] <= pipo_nbit:phase_reg.y[0]
+phase_out[1] <= pipo_nbit:phase_reg.y[1]
+phase_out[2] <= pipo_nbit:phase_reg.y[2]
+phase_out[3] <= pipo_nbit:phase_reg.y[3]
+phase_out[4] <= pipo_nbit:phase_reg.y[4]
+phase_out[5] <= pipo_nbit:phase_reg.y[5]
+
+
+|Telemetry_link|telemetry_rx:TELE_RX|bfsk_demod:RX_DEMOD|rx_carrier_gen:accumulator_rx_lo|phase_acc:digital_phase_gen1|pipo_nbit:phase_inc_reg
+clk => y[0]~reg0.CLK
+clk => y[1]~reg0.CLK
+clk => y[2]~reg0.CLK
+clk => y[3]~reg0.CLK
+clk => y[4]~reg0.CLK
+clk => y[5]~reg0.CLK
+reset => y[0]~reg0.ACLR
+reset => y[1]~reg0.ACLR
+reset => y[2]~reg0.ACLR
+reset => y[3]~reg0.ACLR
+reset => y[4]~reg0.ACLR
+reset => y[5]~reg0.ACLR
+x[0] => y[0]~reg0.DATAIN
+x[1] => y[1]~reg0.DATAIN
+x[2] => y[2]~reg0.DATAIN
+x[3] => y[3]~reg0.DATAIN
+x[4] => y[4]~reg0.DATAIN
+x[5] => y[5]~reg0.DATAIN
+y[0] <= y[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[4] <= y[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[5] <= y[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Telemetry_link|telemetry_rx:TELE_RX|bfsk_demod:RX_DEMOD|rx_carrier_gen:accumulator_rx_lo|phase_acc:digital_phase_gen1|adder_nbit:accumulator
+a[0] => z.IN0
+a[0] => temp_carry.IN0
+a[1] => z.IN0
+a[1] => temp_carry.IN0
+a[1] => temp_carry.IN1
+a[2] => z.IN0
+a[2] => temp_carry.IN0
+a[2] => temp_carry.IN1
+a[3] => z.IN0
+a[3] => temp_carry.IN0
+a[3] => temp_carry.IN1
+a[4] => z.IN0
+a[4] => temp_carry.IN0
+a[4] => temp_carry.IN1
+a[5] => z.IN0
+b[0] => z.IN1
+b[0] => temp_carry.IN1
+b[1] => z.IN1
+b[1] => temp_carry.IN1
+b[1] => temp_carry.IN1
+b[2] => z.IN1
+b[2] => temp_carry.IN1
+b[2] => temp_carry.IN1
+b[3] => z.IN1
+b[3] => temp_carry.IN1
+b[3] => temp_carry.IN1
+b[4] => z.IN1
+b[4] => temp_carry.IN1
+b[4] => temp_carry.IN1
+b[5] => z.IN1
+z[0] <= z.DB_MAX_OUTPUT_PORT_TYPE
+z[1] <= z.DB_MAX_OUTPUT_PORT_TYPE
+z[2] <= z.DB_MAX_OUTPUT_PORT_TYPE
+z[3] <= z.DB_MAX_OUTPUT_PORT_TYPE
+z[4] <= z.DB_MAX_OUTPUT_PORT_TYPE
+z[5] <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Telemetry_link|telemetry_rx:TELE_RX|bfsk_demod:RX_DEMOD|rx_carrier_gen:accumulator_rx_lo|phase_acc:digital_phase_gen1|pipo_nbit:phase_reg
+clk => y[0]~reg0.CLK
+clk => y[1]~reg0.CLK
+clk => y[2]~reg0.CLK
+clk => y[3]~reg0.CLK
+clk => y[4]~reg0.CLK
+clk => y[5]~reg0.CLK
+reset => y[0]~reg0.ACLR
+reset => y[1]~reg0.ACLR
+reset => y[2]~reg0.ACLR
+reset => y[3]~reg0.ACLR
+reset => y[4]~reg0.ACLR
+reset => y[5]~reg0.ACLR
+x[0] => y[0]~reg0.DATAIN
+x[1] => y[1]~reg0.DATAIN
+x[2] => y[2]~reg0.DATAIN
+x[3] => y[3]~reg0.DATAIN
+x[4] => y[4]~reg0.DATAIN
+x[5] => y[5]~reg0.DATAIN
+y[0] <= y[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[4] <= y[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[5] <= y[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Telemetry_link|telemetry_rx:TELE_RX|bfsk_demod:RX_DEMOD|rx_carrier_gen:accumulator_rx_lo|lut_cos:cos_rom0
+clk => temp_amp[0].CLK
+clk => temp_amp[1].CLK
+clk => temp_amp[2].CLK
+clk => temp_amp[3].CLK
+clk => temp_amp[4].CLK
+clk => temp_amp[5].CLK
+clk => amp_bits[0]~reg0.CLK
+clk => amp_bits[1]~reg0.CLK
+clk => amp_bits[2]~reg0.CLK
+clk => amp_bits[3]~reg0.CLK
+clk => amp_bits[4]~reg0.CLK
+clk => amp_bits[5]~reg0.CLK
+reset => temp_amp[0].ACLR
+reset => temp_amp[1].ACLR
+reset => temp_amp[2].ACLR
+reset => temp_amp[3].ACLR
+reset => temp_amp[4].ACLR
+reset => temp_amp[5].ACLR
+reset => amp_bits[5]~reg0.ENA
+reset => amp_bits[4]~reg0.ENA
+reset => amp_bits[3]~reg0.ENA
+reset => amp_bits[2]~reg0.ENA
+reset => amp_bits[1]~reg0.ENA
+reset => amp_bits[0]~reg0.ENA
+phase_bits[0] => Mux0.IN69
+phase_bits[0] => Mux1.IN69
+phase_bits[0] => Mux2.IN69
+phase_bits[0] => Mux3.IN69
+phase_bits[0] => Mux4.IN69
+phase_bits[0] => Mux5.IN69
+phase_bits[1] => Mux0.IN68
+phase_bits[1] => Mux1.IN68
+phase_bits[1] => Mux2.IN68
+phase_bits[1] => Mux3.IN68
+phase_bits[1] => Mux4.IN68
+phase_bits[1] => Mux5.IN68
+phase_bits[2] => Mux0.IN67
+phase_bits[2] => Mux1.IN67
+phase_bits[2] => Mux2.IN67
+phase_bits[2] => Mux3.IN67
+phase_bits[2] => Mux4.IN67
+phase_bits[2] => Mux5.IN67
+phase_bits[3] => Mux0.IN66
+phase_bits[3] => Mux1.IN66
+phase_bits[3] => Mux2.IN66
+phase_bits[3] => Mux3.IN66
+phase_bits[3] => Mux4.IN66
+phase_bits[3] => Mux5.IN66
+phase_bits[4] => Mux0.IN65
+phase_bits[4] => Mux1.IN65
+phase_bits[4] => Mux2.IN65
+phase_bits[4] => Mux3.IN65
+phase_bits[4] => Mux4.IN65
+phase_bits[4] => Mux5.IN65
+phase_bits[5] => Mux0.IN64
+phase_bits[5] => Mux1.IN64
+phase_bits[5] => Mux2.IN64
+phase_bits[5] => Mux3.IN64
+phase_bits[5] => Mux4.IN64
+phase_bits[5] => Mux5.IN64
+amp_bits[0] <= amp_bits[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+amp_bits[1] <= amp_bits[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+amp_bits[2] <= amp_bits[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+amp_bits[3] <= amp_bits[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+amp_bits[4] <= amp_bits[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+amp_bits[5] <= amp_bits[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Telemetry_link|telemetry_rx:TELE_RX|bfsk_demod:RX_DEMOD|rx_carrier_gen:accumulator_rx_lo|lut_cos:cos_rom1
+clk => temp_amp[0].CLK
+clk => temp_amp[1].CLK
+clk => temp_amp[2].CLK
+clk => temp_amp[3].CLK
+clk => temp_amp[4].CLK
+clk => temp_amp[5].CLK
+clk => amp_bits[0]~reg0.CLK
+clk => amp_bits[1]~reg0.CLK
+clk => amp_bits[2]~reg0.CLK
+clk => amp_bits[3]~reg0.CLK
+clk => amp_bits[4]~reg0.CLK
+clk => amp_bits[5]~reg0.CLK
+reset => temp_amp[0].ACLR
+reset => temp_amp[1].ACLR
+reset => temp_amp[2].ACLR
+reset => temp_amp[3].ACLR
+reset => temp_amp[4].ACLR
+reset => temp_amp[5].ACLR
+reset => amp_bits[5]~reg0.ENA
+reset => amp_bits[4]~reg0.ENA
+reset => amp_bits[3]~reg0.ENA
+reset => amp_bits[2]~reg0.ENA
+reset => amp_bits[1]~reg0.ENA
+reset => amp_bits[0]~reg0.ENA
+phase_bits[0] => Mux0.IN69
+phase_bits[0] => Mux1.IN69
+phase_bits[0] => Mux2.IN69
+phase_bits[0] => Mux3.IN69
+phase_bits[0] => Mux4.IN69
+phase_bits[0] => Mux5.IN69
+phase_bits[1] => Mux0.IN68
+phase_bits[1] => Mux1.IN68
+phase_bits[1] => Mux2.IN68
+phase_bits[1] => Mux3.IN68
+phase_bits[1] => Mux4.IN68
+phase_bits[1] => Mux5.IN68
+phase_bits[2] => Mux0.IN67
+phase_bits[2] => Mux1.IN67
+phase_bits[2] => Mux2.IN67
+phase_bits[2] => Mux3.IN67
+phase_bits[2] => Mux4.IN67
+phase_bits[2] => Mux5.IN67
+phase_bits[3] => Mux0.IN66
+phase_bits[3] => Mux1.IN66
+phase_bits[3] => Mux2.IN66
+phase_bits[3] => Mux3.IN66
+phase_bits[3] => Mux4.IN66
+phase_bits[3] => Mux5.IN66
+phase_bits[4] => Mux0.IN65
+phase_bits[4] => Mux1.IN65
+phase_bits[4] => Mux2.IN65
+phase_bits[4] => Mux3.IN65
+phase_bits[4] => Mux4.IN65
+phase_bits[4] => Mux5.IN65
+phase_bits[5] => Mux0.IN64
+phase_bits[5] => Mux1.IN64
+phase_bits[5] => Mux2.IN64
+phase_bits[5] => Mux3.IN64
+phase_bits[5] => Mux4.IN64
+phase_bits[5] => Mux5.IN64
+amp_bits[0] <= amp_bits[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+amp_bits[1] <= amp_bits[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+amp_bits[2] <= amp_bits[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+amp_bits[3] <= amp_bits[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+amp_bits[4] <= amp_bits[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+amp_bits[5] <= amp_bits[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Telemetry_link|telemetry_rx:TELE_RX|bfsk_demod:RX_DEMOD|multiply:mul0
+a[0] => Mult0.IN5
+a[1] => Mult0.IN4
+a[2] => Mult0.IN3
+a[3] => Mult0.IN2
+a[4] => Mult0.IN1
+a[5] => Mult0.IN0
+b[0] => Mult0.IN11
+b[1] => Mult0.IN10
+b[2] => Mult0.IN9
+b[3] => Mult0.IN8
+b[4] => Mult0.IN7
+b[5] => Mult0.IN6
+y[0] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+y[4] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+y[5] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+y[6] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+y[7] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+y[8] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+y[9] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+y[10] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+y[11] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Telemetry_link|telemetry_rx:TELE_RX|bfsk_demod:RX_DEMOD|multiply:mul1
+a[0] => Mult0.IN5
+a[1] => Mult0.IN4
+a[2] => Mult0.IN3
+a[3] => Mult0.IN2
+a[4] => Mult0.IN1
+a[5] => Mult0.IN0
+b[0] => Mult0.IN11
+b[1] => Mult0.IN10
+b[2] => Mult0.IN9
+b[3] => Mult0.IN8
+b[4] => Mult0.IN7
+b[5] => Mult0.IN6
+y[0] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+y[4] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+y[5] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+y[6] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+y[7] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+y[8] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+y[9] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+y[10] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+y[11] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Telemetry_link|telemetry_rx:TELE_RX|bfsk_demod:RX_DEMOD|accumulate:acc0
+reset => y[0]~reg0.CLK
+reset => y[1]~reg0.CLK
+reset => y[2]~reg0.CLK
+reset => y[3]~reg0.CLK
+reset => y[4]~reg0.CLK
+reset => y[5]~reg0.CLK
+reset => y[6]~reg0.CLK
+reset => y[7]~reg0.CLK
+reset => y[8]~reg0.CLK
+reset => y[9]~reg0.CLK
+reset => y[10]~reg0.CLK
+reset => y[11]~reg0.CLK
+reset => y[12]~reg0.CLK
+reset => y[13]~reg0.CLK
+reset => y[14]~reg0.CLK
+reset => delayed_rst.DATAIN
+clk => temp_sum[0].CLK
+clk => temp_sum[1].CLK
+clk => temp_sum[2].CLK
+clk => temp_sum[3].CLK
+clk => temp_sum[4].CLK
+clk => temp_sum[5].CLK
+clk => temp_sum[6].CLK
+clk => temp_sum[7].CLK
+clk => temp_sum[8].CLK
+clk => temp_sum[9].CLK
+clk => temp_sum[10].CLK
+clk => temp_sum[11].CLK
+clk => temp_sum[12].CLK
+clk => temp_sum[13].CLK
+clk => temp_sum[14].CLK
+clk => delayed_rst.CLK
+a[0] => Add0.IN15
+a[1] => Add0.IN14
+a[2] => Add0.IN13
+a[3] => Add0.IN12
+a[4] => Add0.IN11
+a[5] => Add0.IN10
+a[6] => Add0.IN9
+a[7] => Add0.IN8
+a[8] => Add0.IN7
+a[9] => Add0.IN6
+a[10] => Add0.IN5
+a[11] => Add0.IN1
+a[11] => Add0.IN2
+a[11] => Add0.IN3
+a[11] => Add0.IN4
+y[0] <= y[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[4] <= y[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[5] <= y[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[6] <= y[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[7] <= y[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[8] <= y[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[9] <= y[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[10] <= y[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[11] <= y[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[12] <= y[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[13] <= y[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[14] <= y[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Telemetry_link|telemetry_rx:TELE_RX|bfsk_demod:RX_DEMOD|accumulate:acc1
+reset => y[0]~reg0.CLK
+reset => y[1]~reg0.CLK
+reset => y[2]~reg0.CLK
+reset => y[3]~reg0.CLK
+reset => y[4]~reg0.CLK
+reset => y[5]~reg0.CLK
+reset => y[6]~reg0.CLK
+reset => y[7]~reg0.CLK
+reset => y[8]~reg0.CLK
+reset => y[9]~reg0.CLK
+reset => y[10]~reg0.CLK
+reset => y[11]~reg0.CLK
+reset => y[12]~reg0.CLK
+reset => y[13]~reg0.CLK
+reset => y[14]~reg0.CLK
+reset => delayed_rst.DATAIN
+clk => temp_sum[0].CLK
+clk => temp_sum[1].CLK
+clk => temp_sum[2].CLK
+clk => temp_sum[3].CLK
+clk => temp_sum[4].CLK
+clk => temp_sum[5].CLK
+clk => temp_sum[6].CLK
+clk => temp_sum[7].CLK
+clk => temp_sum[8].CLK
+clk => temp_sum[9].CLK
+clk => temp_sum[10].CLK
+clk => temp_sum[11].CLK
+clk => temp_sum[12].CLK
+clk => temp_sum[13].CLK
+clk => temp_sum[14].CLK
+clk => delayed_rst.CLK
+a[0] => Add0.IN15
+a[1] => Add0.IN14
+a[2] => Add0.IN13
+a[3] => Add0.IN12
+a[4] => Add0.IN11
+a[5] => Add0.IN10
+a[6] => Add0.IN9
+a[7] => Add0.IN8
+a[8] => Add0.IN7
+a[9] => Add0.IN6
+a[10] => Add0.IN5
+a[11] => Add0.IN1
+a[11] => Add0.IN2
+a[11] => Add0.IN3
+a[11] => Add0.IN4
+y[0] <= y[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[4] <= y[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[5] <= y[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[6] <= y[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[7] <= y[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[8] <= y[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[9] <= y[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[10] <= y[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[11] <= y[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[12] <= y[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[13] <= y[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[14] <= y[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Telemetry_link|telemetry_rx:TELE_RX|bfsk_demod:RX_DEMOD|decision_dev:dec_dev
+x[0] => ~NO_FANOUT~
+x[1] => ~NO_FANOUT~
+x[2] => ~NO_FANOUT~
+x[3] => ~NO_FANOUT~
+x[4] => ~NO_FANOUT~
+x[5] => ~NO_FANOUT~
+x[6] => ~NO_FANOUT~
+x[7] => ~NO_FANOUT~
+x[8] => ~NO_FANOUT~
+x[9] => ~NO_FANOUT~
+x[10] => ~NO_FANOUT~
+x[11] => ~NO_FANOUT~
+x[12] => ~NO_FANOUT~
+x[13] => ~NO_FANOUT~
+x[14] => out_bit.DATAIN
+out_bit <= x[14].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Telemetry_link|telemetry_rx:TELE_RX|manchester_decoder:umanchester_decoder
+dout <= dout.DB_MAX_OUTPUT_PORT_TYPE
+clk_2x => mdi_buf2.CLK
+clk_2x => mdi_buf.CLK
+clk_1x => mdi_buf2.IN0
+mdi => mdi_buf.DATAIN
+mdi => mdi_buf2.IN1
+reset => dout.OUTPUTSELECT
+reset => mdi_buf2.ACLR
+reset => mdi_buf.PRESET
+
+
